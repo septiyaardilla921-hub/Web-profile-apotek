@@ -29,7 +29,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-
+    <link rel="stylesheet" href="galery.css">
+    <link rel="stylesheet" href="gmaps.css">
 </head>
 
 
@@ -75,6 +76,8 @@
             <li><a href="#services">Layanan</a></li>
 
             <li><a href="#products">Produk</a></li>
+
+            <li><a href="#gallery">Galeri</a></li>
 
             <li>
                 <a href="#contact" class="nav-button">Kontak</a>
@@ -515,6 +518,222 @@
 </section>
 
 
+<!-- ========================================
+     GALLERY SECTION
+======================================== -->
+
+<section class="gallery-section" id="gallery">
+
+    <div class="container">
+
+        <!-- HEADING -->
+        <div class="section-heading reveal">
+
+            <div class="eyebrow">
+                Galeri Kami
+            </div>
+
+            <h2>Mengenal Lebih Dekat Apotek Rani Farma</h2>
+
+            <p>
+                Lihat lebih dekat suasana apotek, fasilitas,
+                serta berbagai produk kesehatan yang kami sediakan.
+            </p>
+
+        </div>
+
+
+        <!-- GALLERY GRID -->
+        <div class="gallery-grid">
+
+            <button class="gallery-item gallery-large reveal"
+                type="button"
+                data-index="0"
+                aria-label="Lihat foto tampak depan apotek">
+
+                <img
+                    src="assets/images/gallery-1.jpg"
+                    alt="Tampak depan Apotek Rani Farma">
+
+                <span class="gallery-overlay">
+                    <span>
+                        <strong>Tampak Depan Apotek</strong>
+                        <small>Apotek Rani Farma</small>
+                    </span>
+
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+
+            <button class="gallery-item reveal"
+                type="button"
+                data-index="1"
+                aria-label="Lihat foto interior apotek">
+
+                <img
+                    src="assets/images/gallery-2.jpg"
+                    alt="Interior Apotek Rani Farma">
+
+                <span class="gallery-overlay">
+                    <span>
+                        <strong>Interior Apotek</strong>
+                        <small>Suasana pelayanan</small>
+                    </span>
+
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+
+            <button class="gallery-item reveal"
+                type="button"
+                data-index="2"
+                aria-label="Lihat foto rak obat">
+
+                <img
+                    src="assets/images/gallery-3.jpg"
+                    alt="Rak obat Apotek Rani Farma">
+
+                <span class="gallery-overlay">
+                    <span>
+                        <strong>Rak Obat</strong>
+                        <small>Berbagai kebutuhan obat</small>
+                    </span>
+
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+
+            <button class="gallery-item reveal"
+                type="button"
+                data-index="3"
+                aria-label="Lihat foto area pelayanan">
+
+                <img
+                    src="assets/images/gallery-4.jpg"
+                    alt="Area pelayanan apotek">
+
+                <span class="gallery-overlay">
+                    <span>
+                        <strong>Area Pelayanan</strong>
+                        <small>Pelayanan pelanggan</small>
+                    </span>
+
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+
+            <button class="gallery-item reveal"
+                type="button"
+                data-index="4"
+                aria-label="Lihat foto produk vitamin">
+
+                <img
+                    src="assets/images/gallery-5.jpg"
+                    alt="Produk vitamin dan suplemen">
+
+                <span class="gallery-overlay">
+                    <span>
+                        <strong>Vitamin dan Suplemen</strong>
+                        <small>Kebutuhan kesehatan</small>
+                    </span>
+
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+
+            <button class="gallery-item reveal"
+                type="button"
+                data-index="5"
+                aria-label="Lihat foto produk kesehatan">
+
+                <img
+                    src="assets/images/gallery-6.jpg"
+                    alt="Produk kesehatan Apotek Rani Farma">
+
+                <span class="gallery-overlay">
+                    <span>
+                        <strong>Produk Kesehatan</strong>
+                        <small>Kebutuhan keluarga</small>
+                    </span>
+
+                    <i class="fa-solid fa-expand"></i>
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     GALLERY LIGHTBOX
+======================================== -->
+
+<div class="gallery-lightbox"
+    id="galleryLightbox"
+    aria-hidden="true">
+
+    <button class="lightbox-close"
+        id="lightboxClose"
+        type="button"
+        aria-label="Tutup galeri">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <button class="lightbox-nav lightbox-prev"
+        id="lightboxPrev"
+        type="button"
+        aria-label="Foto sebelumnya">
+
+        <i class="fa-solid fa-chevron-left"></i>
+
+    </button>
+
+
+    <div class="lightbox-content">
+
+        <img
+            src=""
+            alt=""
+            id="lightboxImage">
+
+        <div class="lightbox-caption">
+
+            <strong id="lightboxTitle"></strong>
+
+            <span id="lightboxCounter"></span>
+
+        </div>
+
+    </div>
+
+
+    <button class="lightbox-nav lightbox-next"
+        id="lightboxNext"
+        type="button"
+        aria-label="Foto berikutnya">
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+    </button>
+
+</div>
 
 <!-- ========================================
      CONTACT SECTION
@@ -547,35 +766,8 @@
 
             </p>
                 
-            
-                <!-- ALAMAT -->
-                <div class="contact-item">
 
-                    <i class="fas fa-map-marker-alt"></i>
-
-                    <div>
-                        <strong>Alamat</strong>
-
-                        <a
-                            href="https://maps.app.goo.gl/A164ZZnuWnhaHV3Y8"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="address-link"
-                        >
-                            <span>
-                                JL Raya Basungan, Pagar Dewa,
-                                Lampung Barat
-                            </span>
-
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- JAM OPERASIONAL -->
+            <!-- JAM OPERASIONAL -->
                 <div class="contact-item">
 
                     <i class="fas fa-clock"></i>
@@ -584,13 +776,13 @@
                         <strong>Jam Operasional</strong>
 
                         <span>
-                            Senin - Sabtu, 08.00 - 20.00 WIB
+                            Setiap Hari, 08.00 - 20.00 WIB
                         </span>
                     </div>
 
                 </div>
 
-
+            <!-- Informasi Kontak -->
             <a href="https://wa.me/6285609211447"
                 class="btn btn-primary contact-button"
                 target="_blank"
@@ -619,16 +811,73 @@
 
         </div>
 
+        <!-- GOOGLE MAPS -->
+        <div class="contact-map reveal">
 
-        <div class="contact-image">
-            <div class="logo-card">
+            <div class="map-heading">
 
-                <img
-                    src="Logo.png"
-                    alt="Kontak Apotek Rani Farma">
+                <div class="map-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+                    <h3>Lokasi Apotek Rani Farma</h3>
+
+                    <p>
+                        JL Raya Basungan, Pagar Dewa,
+                        Lampung Barat
+                    </p>
+                </div>
+
             </div>
-        </div>
 
+
+            <!-- MAP EMBED -->
+            <div class="map-frame">
+
+                <iframe
+                    src="https://www.google.com/maps?q=-4.9490527,104.3945963&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Lokasi Apotek Rani Farma">
+                </iframe>
+
+            </div>
+
+
+            <!-- MAP FOOTER -->
+            <div class="map-footer">
+
+                <div class="map-location-info">
+
+                    <i class="fa-solid fa-map-pin"></i>
+
+                    <span>
+                        Temukan lokasi Apotek Rani Farma
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="https://maps.app.goo.gl/A164ZZnuWnhaHV3Y8"
+                    class="map-direction-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fa-solid fa-diamond-turn-right"></i>
+
+                    Petunjuk Arah
+
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -686,6 +935,8 @@
                 <a href="#services">Layanan</a>
 
                 <a href="#products">Produk</a>
+
+                <a href="#gallery">Galeri</a>
 
                 <a href="#contact">Kontak</a>
 
@@ -760,7 +1011,7 @@
 <!-- JAVASCRIPT -->
 
 <script src="index.js"></script>
-
+<script src="galery.js"></script>
 
 </body>
 
