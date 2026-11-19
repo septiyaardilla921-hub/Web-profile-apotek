@@ -1,0 +1,159 @@
+/* =========================================
+   18. GOOGLE MAPS (KONTAK)
+========================================= */
+
+.contact-map {
+    width: 100%;
+    min-width: 0;                       /* mencegah iframe melebarkan kolom grid */
+    padding: 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* Judul peta */
+.map-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.map-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    color: var(--gold-light);
+    background: var(--primary);
+    border-radius: 14px;
+    font-size: 20px;
+    box-shadow: 0 6px 14px rgba(15, 74, 54, .25);
+}
+
+.map-heading h3 {
+    margin-bottom: 3px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.map-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+/* Bingkai peta */
+.map-frame {
+    position: relative;
+    width: 100%;
+    height: clamp(300px, 36vw, 400px);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--light);
+}
+
+.map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Bagian bawah: alamat singkat + tombol rute */
+.map-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px 18px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.map-location-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.map-location-info i {
+    color: var(--gold-deep);
+    font-size: 16px;
+}
+
+/* Tombol rute: gaya sama dengan tombol utama */
+.map-direction-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 22px;
+    color: var(--black);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    box-shadow: 0 8px 20px rgba(201, 162, 75, .30);
+    transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+}
+
+.map-direction-btn:hover {
+    background: linear-gradient(135deg, var(--gold) 0%, #B08A32 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(138, 106, 28, .35);
+}
+
+.map-direction-btn:active {
+    transform: scale(.98);
+}
+
+/* Responsif (breakpoint disamakan dengan bagian lain) */
+@media (max-width: 650px) {
+
+    .contact-map {
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .map-heading {
+        gap: 12px;
+    }
+
+    .map-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .map-heading h3 {
+        font-size: 16px;
+    }
+
+    .map-heading p {
+        font-size: 13px;
+    }
+
+    .map-frame {
+        height: 280px;
+        border-radius: 12px;
+    }
+
+    .map-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .map-direction-btn {
+        width: 100%;
+    }
+}
